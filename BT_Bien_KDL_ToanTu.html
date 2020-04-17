@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Bài 1:Tính tổng và điểm trung bình</h2>
+<script>
+    let a = parseInt(prompt("Nhập điểm vật lý"));
+    let b = parseInt(prompt("Nhập điểm Hóa"));
+    let c = parseInt(prompt("Nhập điểm Sinh"));
+    let tb = (a + b + c)/3;
+    let t = a + b + c;
+    document.write("Tổng điểm 3 môn là: " + t);
+    document.write('<br/>')
+    document.write("Điểm trung bình là: " + tb);
+</script>
+<h2>Bài 2:Chuyển đổi 0C sang 0F</h2>
+<script>
+    let C = parseInt(prompt("Nhập 0C"));
+    let F = (9*C) / 5 + 32;
+    document.write("0C = " + C);
+    document.write("<br/>");
+    document.write("0F = " + F)
+</script>
+<h2>Bài 3:Tính diện tích và chu vi hình tròn</h2>
+<script>
+    let r = parseInt(prompt("Nhập bán kính hình tròn"));
+    let S = (r * r) * 3.14;
+    let P = (r *2) * 3.14;
+    document.write("Bán kính của hình tròn: " + r);
+    document.write("<br/>");
+    document.write("Diện tích hình tron là: " + S);
+    document.write("<br/>");
+    document.write("Chu vi hình tròn là: " + P);
+</script>
+</body>
+</html>
