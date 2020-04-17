@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="number"/>
+<button type="button" onclick="count()">Tính số ngày</button>
+<div id="xuat"></div>
+<script>
+    function count() {
+        let day = document.getElementById('number').value;
+        let s = parseInt(day);
+        switch (s) {
+            case 2:
+                document.getElementById('xuat').innerHTML = 'Tháng có 28 hoặc 29 ngày';
+                break;
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById('xuat').innerHTML = 'Tháng có 31 ngày';
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.getElementById('xuat').innerHTML = "Tháng có 30 ngày";
+                break;
+        }
+    }
+</script>
+</body>
+</html>
