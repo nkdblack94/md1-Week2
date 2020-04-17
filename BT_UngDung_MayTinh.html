@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function Tinh(tt, number1, number2) {
+            console.log(tt)
+            let so1 = parseInt(number1);
+            let so2 = parseInt(number2);
+            let kq = "";
+            if (tt === 'cong') {
+                kq = so1 + so2
+            } else if (tt === 'tru') {
+                kq = so1 - so2
+            } else if (tt === 'nhan') {
+                kq = so1 * so2
+            } else if (tt === 'chia') {
+                kq = so1 / so2
+            }
+            return kq;
+        }
+    </script>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <td colspan="2"><input id="number1" type="text" style="width: 150px"/></td>
+            <td colspan="2"><input id="number2" type="text" style="width: 150px"/></td>
+        </tr>
+        <tr id="tt">
+            <td>
+                <button type="button" onclick="xuat.innerHTML = Tinh('cong', number1.value, number2.value)">
+                    Addition(+)
+                </button>
+            </td>
+            <td>
+                <button type="button" onclick="xuat.innerHTML = Tinh('tru', number1.value, number2.value)">
+                    Subtraction(-)
+                </button>
+            </td>
+            <td>
+                <button type="button" onclick="xuat.innerHTML = Tinh('nhan', number1.value, number2.value)">
+                    Multiplicatinon(x)
+                </button>
+            </td>
+            <td>
+                <button type="button" onclick="xuat.innerHTML = Tinh('chia', number1.value, number2.value)">
+                    Division(/)
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>Result:</div>
+            </td>
+            <td>
+                <div id="xuat"></div>
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
