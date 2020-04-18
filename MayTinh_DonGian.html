@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+    <style>
+        table {
+            background:gainsboro;
+        }
+        tr, td {
+            width: 50px;
+            height: 50px;
+        }
+        input {
+            width: 200px;
+            height: 30px;
+            text-align: right;
+            background: wheat;
+        }
+        button {
+            color: blue;
+            width: 40px;
+            height: 40px;
+            background: cadetblue;
+        }
+    </style>
+    <script>
+        function EnterNumber(so) {
+            let number = document.getElementById('number');
+            number.value += so
+        }
+        function Result() {
+            let result = document.getElementById('number').value;
+            document.getElementById('number').value = eval(result);
+        }
+        function Reset() {
+            document.getElementById('number').value = null;
+        }
+    </script>
+</head>
+<body>
+<table align="center" border="1" style="text-align: center">
+    <tr>
+        <td colspan="4"><input type="text" id="number"/></td>
+    </tr>
+    <tr>
+        <td><button onclick="EnterNumber('1')">1</button></td>
+        <td><button onclick="EnterNumber('2')">2</button></td>
+        <td><button onclick="EnterNumber('3')">3</button></td>
+        <td><button onclick="EnterNumber('+')">+</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="EnterNumber('4')">4</button></td>
+        <td><button onclick="EnterNumber('5')">5</button></td>
+        <td><button onclick="EnterNumber('6')">6</button></td>
+        <td><button onclick="EnterNumber('-')">-</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="EnterNumber('7')">7</button></td>
+        <td><button onclick="EnterNumber('8')">8</button></td>
+        <td><button onclick="EnterNumber('9')">9</button></td>
+        <td><button onclick="EnterNumber('*')">x</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="Reset('C')">C</button></td>
+        <td><button onclick="EnterNumber('0')">0</button></td>
+        <td><button onclick="Result()">=</button></td>
+        <td><button onclick="EnterNumber('/')">/</button></td>
+    </tr>
+</table>
+</body>
+</html>
