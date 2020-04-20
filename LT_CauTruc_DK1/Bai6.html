@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tiền hoa thưởng</title>
+</head>
+<body>
+    <script language="JavaScript">
+        function TinhTienHH() {
+            let number = parseInt(prompt('nhập số doanh thu của cửa hàng trong tháng'));
+            let h1 = (number * 7) / 100;
+            let h2 = (number * 5) / 100;
+            let h3 = (number * 3) / 100;
+            if (number >= 50000000){
+                document.write('Số tiền thưởng nhận được là: ' + h1.toLocaleString() + ' VND')
+            } else if (number >= 30000000){
+                document.write('Số tiền thưởng nhập được là: ' + h2.toLocaleString() + ' VND')
+            } else if (number >= 20000000){
+                document.write('Số tiền thưởng nhận được là: ' + h3.toLocaleString() + ' VND')
+            } else {
+                document.write('Bạn không được thưởng')
+            }
+        }
+        TinhTienHH();
+    </script>
+</body>
+</html>
