@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm GT max</title>
+</head>
+<body>
+<script language="JavaScript">
+    function NumberMax() {
+        let a = parseInt(prompt('nhập số a'));
+        let b = parseInt(prompt('nhập số b'));
+        let c = parseInt(prompt('nhập số c'));
+        if (a > b && a > c) {
+            document.write('số thứ nhất: ' + a +
+                '<br/>' + 'số thứ hai: ' + b +
+                '<br/>' + 'số thứ ba: ' + c +
+                '<br/>' + a + ' là số lớn nhất');
+        } else if (b > a && b > c) {
+            document.write('số thứ nhất: ' + a +
+                '<br/>' + 'số thứ hai: ' + b +
+                '<br/>' + 'số thứ ba: ' + c +
+                '<br/>' + b + ' là số lớn nhất');
+        } else {
+            document.write('số thứ nhất: ' + a +
+                '<br/>' + 'số thứ hai: ' + b +
+                '<br/>' + 'số thứ ba: ' + c +
+                '<br/>' + c + ' là số lớn nhất')
+        }
+    }
+
+    NumberMax();
+</script>
+</body>
+</html>
