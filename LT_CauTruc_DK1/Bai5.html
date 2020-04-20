@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực của HS</title>
+</head>
+<body>
+<script language="JavaScript">
+    function XetHocLuc() {
+        let DGK = parseInt(prompt('nhập điểm thi giữa kỳ'));
+        let DCK = parseInt(prompt('nhập điểm thi cuối kỳ'));
+        let HL = (DGK + (DCK * 2)) / 3;
+        if (HL >= 8.5){
+            document.write('học lực giỏi');
+        } else if (HL > 6.5){
+            document.write('học lực khá');
+        } else if (HL >= 5){
+            document.write('học lực trung bình');
+        } else {
+            document.write('học lực yếu')
+        }
+    }
+    XetHocLuc();
+</script>
+</body>
+</html>
