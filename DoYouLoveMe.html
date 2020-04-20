@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DoYouLoveMe</title>
+    <style>
+        h1 {
+            color: crimson;
+        }
+        button {
+            color: crimson;
+        }
+    </style>
+    <script language="JavaScript">
+        function Alert() {
+            alert("<3")
+        }
+        function Random() {
+            let x = Math.round(Math.random() * window.innerWidth);
+            let y = Math.round(Math.random() * window.innerHeight);
+            document.getElementById('run').style.left = x + 'px';
+            document.getElementById('run').style.top = y + 'px';
+        }
+    </script>
+</head>
+<body align="center">
+<h1>Do You Love Me</h1>
+<button type="button" onclick="Alert()">Yes</button>
+<button type="button" id="run" onmouseover="Random()" style="position: absolute">No</button>
+</body>
+</html>
