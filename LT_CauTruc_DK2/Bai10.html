@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giá điện</title>
+</head>
+<body>
+<script language="JavaScript">
+    function TinhGiaDien(number) {
+        let b1 = number * 1678;
+        let b2 = ((number - 50) * 1734) + 83900;
+        let b3 = ((number - 100) * 2014) + 170600;
+        let b4 = ((number - 200) * 2536) + 372000;
+        let b5 = ((number - 300) * 2834) + 625600;
+        let b6 = ((number - 400) * 2927) + 909000;
+        if (number <= 50){
+            document.write('số tiền điện là: ' + b1)
+        } else if (number <= 100){
+            document.write('số tiền điện là: ' + b2)
+        } else if (number <=200){
+            document.write('số tiền điện là: ' + b3)
+        } else if (number <= 300){
+            document.write('số tiền điện là: ' + b4)
+        } else if (number <= 400){
+            document.write('số tiền điện là: ' + b5)
+        } else {
+            document.write('số tiền điện là: ' + b6)
+        }
+    }
+    TinhGiaDien(500);
+</script>
+</body>
+</html>
