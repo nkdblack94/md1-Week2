@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính cước điện thoại</title>
+</head>
+<body>
+<script language="JavaScript">
+    function TelephoneCharges() {
+        let number1 = parseInt(prompt('nhập số phút gọi nội mạng'));
+        let number2 = parseInt(prompt('nhập số phút gọi ngoại mạng'));
+        let NM = number1 * 800;
+        let LM = number2 * 1200;
+        let money = NM + LM;
+
+        document.write('Số tiền cước gọi nội mạng là: ' + NM.toLocaleString() + ' VND' +'<br/>');
+        document.write('Số tiền cước gọi ngoại mạng là: ' + LM.toLocaleString() + ' VND' +'<br/>');
+        document.write('Tổng số tiền phải chả là: ' + money.toLocaleString() + ' VND')
+    }
+    TelephoneCharges();
+</script>
+</body>
+</html>
