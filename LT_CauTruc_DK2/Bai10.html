@@ -14,17 +14,17 @@
         let b5 = ((number - 300) * 2834) + 625600;
         let b6 = ((number - 400) * 2927) + 909000;
         if (number <= 50){
-            document.write('số tiền điện là: ' + b1.toLocaleString() + ' VND')
+            document.write(number + ' kWh = ' + b1.toLocaleString() + ' VND')
         } else if (number <= 100){
-            document.write('số tiền điện là: ' + b2.toLocaleString() + ' VND')
+            document.write(number + ' kWh = ' + b2.toLocaleString() + ' VND')
         } else if (number <=200){
-            document.write('số tiền điện là: ' + b3.toLocaleString() + ' VND')
+            document.write(number + ' kWh = ' + b3.toLocaleString() + ' VND')
         } else if (number <= 300){
-            document.write('số tiền điện là: ' + b4.toLocaleString() + ' VND')
+            document.write(number + ' kWh = ' + b4.toLocaleString() + ' VND')
         } else if (number <= 400){
-            document.write('số tiền điện là: ' + b5.toLocaleString() + ' VND')
+            document.write(number + ' kWh = ' + b5.toLocaleString() + ' VND')
         } else {
-            document.write('số tiền điện là: ' + b6.toLocaleString() + ' VND')
+            document.write(number + ' kWh = ' + b6.toLocaleString() + ' VND')
         }
     }
     let a = parseInt(prompt('nhập số điện sử dụng'));
