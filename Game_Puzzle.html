@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game puzzle</title>
+    <style>
+        img {
+            width: 700px;
+            height: 120px;
+        }
+    </style>
+    <script>
+        function LoadImg1() {
+            let img1 = document.getElementById('1');
+            let img2 = document.getElementById('2');
+            let img3 = document.getElementById('3');
+            let img4 = document.getElementById('4');
+            let img5 = document.getElementById('5');
+            if (img1.src.match('monkey')) {
+                img1.src = './img/panda_swap_part1x1.jpg'
+            } else if (img1.src.match('panda')) {
+                img1.src = './img/funny-cat1_part1x1.jpg'
+            } else {
+                img1.src = './img/monkey_part1x1.jpg'
+            }
+            if (img1.src.match('monkey') && img2.src.match('monkey') && img3.src.match('monkey') && img4.src.match('monkey') && img5.src.match('monkey')) {
+                setTimeout(function(){alert('Hoàn Thành')}, 500)
+            } else if (img1.src.match('panda') && img2.src.match('panda') && img3.src.match('panda') && img4.src.match('panda') && img5.src.match('panda')) {
+                setTimeout(function(){alert('Hoàn Thành')}, 500)
+            } else if (img1.src.match('funny') && img2.src.match('funny') && img3.src.match('funny') && img4.src.match('funny') && img5.src.match('funny')) {
+                setTimeout(function(){alert('Hoàn Thành')}, 500)
+            }
+        }
+
+        function LoadImg2() {
+            let img1 = document.getElementById('1');
+            let img2 = document.getElementById('2');
+            let img3 = document.getElementById('3');
+            let img4 = document.getElementById('4');
+            let img5 = document.getElementById('5');
+            if (img2.src.match('monkey')) {
+                img2.src = './img/panda_swap_part2x1.jpg'
+            } else if (img2.src.match('panda')) {
+                img2.src = './img/funny-cat1_part2x1.jpg'
+            } else {
+                img2.src = './img/monkey_part2x1.jpg'
+            }
+            if (img1.src.match('monkey') && img2.src.match('monkey') && img3.src.match('monkey') && img4.src.match('monkey') && img5.src.match('monkey')) {
+                setTimeout(function(){alert('Hoàn Thành')}, 500)
+            } else if (img1.src.match('panda') && img2.src.match('panda') && img3.src.match('panda') && img4.src.match('panda') && img5.src.match('panda')) {
+                setTimeout(function(){alert('Hoàn Thành')}, 500)
+            } else if (img1.src.match('funny') && img2.src.match('funny') && img3.src.match('funny') && img4.src.match('funny') && img5.src.match('funny')) {
+                setTimeout(function(){alert('Hoàn Thành')}, 500)
+            }
+        }
+
+        function LoadImg3() {
+            let img1 = document.getElementById('1');
+            let img2 = document.getElementById('2');
+            let img3 = document.getElementById('3');
+            let img4 = document.getElementById('4');
+            let img5 = document.getElementById('5');
+            if (img3.src.match('monkey')) {
+                img3.src = './img/panda_swap_part3x1.jpg'
+            } else if (img3.src.match('panda')) {
+                img3.src = './img/funny-cat1_part3x1.jpg'
+            } else {
+                img3.src = './img/monkey_part3x1.jpg'
+            }
+            if (img1.src.match('monkey') && img2.src.match('monkey') && img3.src.match('monkey') && img4.src.match('monkey') && img5.src.match('monkey')) {
+                setTimeout(function(){alert('Hoàn Thành')}, 500)
+            } else if (img1.src.match('panda') && img2.src.match('panda') && img3.src.match('panda') && img4.src.match('panda') && img5.src.match('panda')) {
+                setTimeout(function(){alert('Hoàn Thành')}, 500)
+            } else if (img1.src.match('funny') && img2.src.match('funny') && img3.src.match('funny') && img4.src.match('funny') && img5.src.match('funny')) {
+                setTimeout(function(){alert('Hoàn Thành')}, 500)
+            }
+        }
+
+        function LoadImg4() {
+            let img1 = document.getElementById('1');
+            let img2 = document.getElementById('2');
+            let img3 = document.getElementById('3');
+            let img4 = document.getElementById('4');
+            let img5 = document.getElementById('5');
+            if (img4.src.match('monkey')) {
+                img4.src = './img/panda_swap_part4x1.jpg'
+            } else if (img4.src.match('panda')) {
+                img4.src = './img/funny-cat1_part4x1.jpg'
+            } else {
+                img4.src = './img/monkey_part4x1.jpg'
+            }
+            if (img1.src.match('monkey') && img2.src.match('monkey') && img3.src.match('monkey') && img3.src.match('monkey') && img5.src.match('monkey')) {
+                setTimeout(function(){alert('Hoàn Thành')}, 500)
+            } else if (img1.src.match('panda') && img2.src.match('panda') && img3.src.match('panda') && img4.src.match('panda') && img5.src.match('panda')) {
+                setTimeout(function(){alert('Hoàn Thành')}, 500)
+            } else if (img1.src.match('funny') && img2.src.match('funny') && img3.src.match('funny') && img4.src.match('funny') && img5.src.match('funny')) {
+                setTimeout(function(){alert('Hoàn Thành')}, 500)
+            }
+        }
+
+        function LoadImg5() {
+            let img1 = document.getElementById('1');
+            let img2 = document.getElementById('2');
+            let img3 = document.getElementById('3');
+            let img4 = document.getElementById('4');
+            let img5 = document.getElementById('5');
+            if (img5.src.match('monkey')) {
+                img5.src = './img/panda_swap_part5x1.jpg'
+            } else if (img5.src.match('panda')) {
+                img5.src = './img/funny-cat1_part5x1.jpg'
+            } else {
+                img5.src = './img/monkey_part5x1.jpg'
+            }
+            if (img1.src.match('monkey') && img2.src.match('monkey') && img3.src.match('monkey') && img3.src.match('monkey') && img4.src.match('monkey')) {
+                setTimeout(function(){alert('Hoàn Thành')}, 500)
+            } else if (img1.src.match('panda') && img2.src.match('panda') && img3.src.match('panda') && img4.src.match('panda') && img5.src.match('panda')) {
+                setTimeout(function(){alert('Hoàn Thành')}, 500)
+            } else if (img1.src.match('funny') && img2.src.match('funny') && img3.src.match('funny') && img4.src.match('funny') && img5.src.match('funny')) {
+                setTimeout(function(){alert('Hoàn Thành')}, 500)
+            }
+        }
+    </script>
+</head>
+<body align="center">
+<img src="./img/panda_swap_part1x1.jpg" id="1" onclick="LoadImg1()"/>
+<img src="./img/funny-cat1_part2x1.jpg" id="2" onclick="LoadImg2()"/>
+<img src="./img/panda_swap_part3x1.jpg" id="3" onclick="LoadImg3()"/>
+<img src="./img/funny-cat1_part4x1.jpg" id="4" onclick="LoadImg4()"/>
+<img src="./img/monkey_part5x1.jpg" id="5" onclick="LoadImg5()"/>
+</body>
+</html>
