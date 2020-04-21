@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script language="JavaScript">
+    function PersonalIncomeTax(number) {
+        number = number - 9;
+        let b1 = (number * 5) / 100;
+        let b2 = (((number - 5) * 10) / 100) + 0.25;
+        let b3 = (((number - 10) * 15) / 100) + 0.75;
+        let b4 = (((number - 18) * 20) / 100) + 1.95;
+        let b5 = (((number - 32) * 25) / 100) + 4.75;
+        let b6 = (((number - 52) * 30) / 100) + 9.75;
+        let b7 = (((number - 80) * 35) / 100) + 18.15;
+        if (number <= 0) {
+            document.getElementById('xuat').innerHTML = 'Bạn không phải đóng thuế'
+        } else if (number <= 5) {
+            document.getElementById('xuat').innerHTML = 'Bạn phải đóng: ' + b1 + 'tr VND'
+        } else if (number <= 10) {
+            document.getElementById('xuat').innerHTML = 'Bạn phải đóng: ' + b2 + 'tr VND'
+        } else if (number <= 18) {
+            document.getElementById('xuat').innerHTML = 'Bạn phải đóng: ' + b3 + 'tr VND'
+        } else if (number <= 32) {
+            document.getElementById('xuat').innerHTML = 'Bạn phải đóng: ' + b4 + 'tr VND'
+        } else if (number <= 52) {
+            document.getElementById('xuat').innerHTML = 'Bạn phải đóng: ' + b5 + 'tr VND'
+        } else if (number <= 80) {
+            document.getElementById('xuat').innerHTML = 'Bạn phải đóng: ' + b6 + 'tr VND'
+        } else {
+            document.getElementById('xuat').innerHTML = 'Bạn phải đóng: ' + b7 + 'tr VND'
+        }
+    }
+</script>
+
+<h1 style="color: blue">Tính thuế thu nhập cá nhân</h1>
+<h3>Nhập số tiền lương 1 tháng của bạn</h3>
+Đơn vị triệu đồng <br/>
+<input type="text" id="number"/>
+<button type="button" onclick="PersonalIncomeTax(number.value)">Count</button>
+<div id="xuat" style="color: blue">Result:</div>
+</body>
+</html>
