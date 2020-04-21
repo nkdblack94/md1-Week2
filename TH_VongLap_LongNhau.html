@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vòng lặp lồng nhau</title>
+    <style>
+        tr, td {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<script language="JavaScript">
+    let table = '<table border="1" cellspacing="0" cellpadding="0">';
+    for (let i = 1; i <= 10; i++) {
+        table = table + '<tr>';
+        for (let j = 1; j <= 10; j++) {
+            table = table + '<td>' + i * j + '</td>';
+        }
+        table = table + '</tr>';
+    }
+    table = table + '</table>';
+    document.write(table);
+</script>
+</body>
+</html>
