@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Toán Tử Ngôi 3</title>
+</head>
+<body>
+<h2>Bài 1: Viết chương trình nhập vào giá trị cho a và b</h2>
+<script>
+    let a = parseInt(prompt('a: '));
+    let b = parseInt(prompt('b: '));
+    let result;
+    result = (a + b < 4) ? 'Below' : 'Over';
+    document.write(result)
+</script>
+<h2>Bài 2: Viết chương trình nhập vào giá trị cho chuỗi message. </h2>
+<script>
+    let login = prompt('message: ');
+    let message = (login === 'Employee') ? 'Hello' : (login === 'Director') ? 'Greetings' : (login === '') ? 'No login' : '';
+    alert(message)
+</script>
+</body>
+</html>
