@@ -8,7 +8,7 @@
             let kq = 0;
             if (lt === 'vn') {
                 if (tt === 'USD') {
-                    kq = number / 23200
+                    kq = number / 23200;
                     document.getElementById('xuat').innerHTML = kq + ' USD'
                 } else if (tt === "VND") {
                     kq = number;
@@ -16,10 +16,10 @@
                 }
             }
             if (lt === 'usd') {
-                if (tt === 'VND'){
+                if (tt === 'VND') {
                     kq = number * 23200
                     document.getElementById('xuat').innerHTML = kq + ' VND'
-                } else if (tt === 'USD'){
+                } else if (tt === 'USD') {
                     kq = number;
                     document.getElementById('xuat').innerHTML = kq + ' USD'
                 }
@@ -28,32 +28,36 @@
     </script>
 </head>
 <body>
-<form>
-<h3>Ứng dụng chuyển đổi tiền tệ</h3>
-<table>
-    <tr>
-        <td>Amount</td>
-        <td>From Currency</td>
-        <td>To Currency</td>
-    </tr>
-    <tr>
-        <td><input id="number" type="text"/></td>
-        <td>
-            <select id="lt">
-                <option value="vn">Việt Nam</option>
-                <option value="usd">USD</option>
-            </select>
-        </td>
-        <td>
-            <select id="tt">
-                <option value="USD">USD</option>
-                <option value="VND">Việt Nam</option>
-            </select>
-        </td>
-        <td><button type="button" onclick="quy_doi(number.value, tt.value, lt.value)">Convert</button></td>
-    </tr>
-</table>
-<div id="xuat">Result: </div>
-</form>
+<div>
+    <form>
+        <h3>Ứng dụng chuyển đổi tiền tệ</h3>
+        <table>
+            <tr>
+                <td>Amount</td>
+                <td>From Currency</td>
+                <td>To Currency</td>
+            </tr>
+            <tr>
+                <td><input id="number" type="text"/></td>
+                <td>
+                    <select id="lt">
+                        <option value="vn">Việt Nam</option>
+                        <option value="usd">USD</option>
+                    </select>
+                </td>
+                <td>
+                    <select id="tt">
+                        <option value="USD">USD</option>
+                        <option value="VND">Việt Nam</option>
+                    </select>
+                </td>
+                <td>
+                    <button type="button" onclick="quy_doi(number.value, tt.value, lt.value)">Convert</button>
+                </td>
+            </tr>
+        </table>
+        <div id="xuat">Result:</div>
+    </form>
+</div>
 </body>
 </html>
