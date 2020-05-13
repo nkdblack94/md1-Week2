@@ -6,40 +6,41 @@
 </head>
 <body>
 <script language="JavaScript">
-    function PersonalIncomeTax(number) {
+    function PersonalIncomeTax(char) {
+        let number = parseInt(char);
         number = number - 9;
-        let b1 = (number * 5) / 100;
-        let b2 = (((number - 5) * 10) / 100) + 0.25;
-        let b3 = (((number - 10) * 15) / 100) + 0.75;
-        let b4 = (((number - 18) * 20) / 100) + 1.95;
-        let b5 = (((number - 32) * 25) / 100) + 4.75;
-        let b6 = (((number - 52) * 30) / 100) + 9.75;
-        let b7 = (((number - 80) * 35) / 100) + 18.15;
         if (number <= 0) {
-            document.getElementById('xuat').innerHTML = 'Bạn không phải đóng thuế'
+            document.getElementById('xuat').innerHTML = 'Bạn không phải đóng thuế';
         } else if (number <= 5) {
-            document.getElementById('xuat').innerHTML = 'Bạn phải đóng: ' + b1 + 'tr VND'
+            let b1 = (number * 5) / 100;
+            document.getElementById('xuat').innerHTML = 'Bạn phải đóng: ' + b1.toLocaleString() + 'tr';
         } else if (number <= 10) {
-            document.getElementById('xuat').innerHTML = 'Bạn phải đóng: ' + b2 + 'tr VND'
+            let b2 = (((number - 5) * 10) / 100) + 0.25;
+            document.getElementById('xuat').innerHTML = 'Bạn phải đóng: ' + b2.toLocaleString() + 'tr';
         } else if (number <= 18) {
-            document.getElementById('xuat').innerHTML = 'Bạn phải đóng: ' + b3 + 'tr VND'
+            let b3 = (((number - 10) * 15) / 100) + 0.75;
+            document.getElementById('xuat').innerHTML = 'Bạn phải đóng: ' + b3.toLocaleString() + 'tr';
         } else if (number <= 32) {
-            document.getElementById('xuat').innerHTML = 'Bạn phải đóng: ' + b4 + 'tr VND'
+            let b4 = (((number - 18) * 20) / 100) + 1.95;
+            document.getElementById('xuat').innerHTML = 'Bạn phải đóng: ' + b4.toLocaleString() + 'tr';
         } else if (number <= 52) {
-            document.getElementById('xuat').innerHTML = 'Bạn phải đóng: ' + b5 + 'tr VND'
+            let b5 = (((number - 32) * 25) / 100) + 4.75;
+            document.getElementById('xuat').innerHTML = 'Bạn phải đóng: ' + b5.toLocaleString() + 'tr';
         } else if (number <= 80) {
-            document.getElementById('xuat').innerHTML = 'Bạn phải đóng: ' + b6 + 'tr VND'
+            let b6 = (((number - 52) * 30) / 100) + 9.75;
+            document.getElementById('xuat').innerHTML = 'Bạn phải đóng: ' + b6.toLocaleString() + 'tr';
         } else {
-            document.getElementById('xuat').innerHTML = 'Bạn phải đóng: ' + b7 + 'tr VND'
+            let b7 = (((number - 80) * 35) / 100) + 18.15;
+            document.getElementById('xuat').innerHTML = 'Bạn phải đóng: ' + b7.toLocaleString() + 'tr';
         }
     }
 </script>
 
 <h1 style="color: blue">Tính thuế thu nhập cá nhân</h1>
 <h3>Nhập số tiền lương 1 tháng của bạn</h3>
-Đơn vị triệu đồng <br/>
+<h3 style="color: crimson">Đơn vị triệu đồng</h3>
 <input type="text" id="number"/>
 <button type="button" onclick="PersonalIncomeTax(number.value)">Count</button>
-<div id="xuat" style="color: blue">Result:</div>
+<div id="xuat" style="color: blue"><h3>Result:</h3></div>
 </body>
 </html>
