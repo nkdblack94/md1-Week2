@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body align="center">
+<h1 style="color: blue">Tính lich chả nợ vs số dư ban đầu</h1>
+<table align="center">
+    <tr>
+        <td>Số tiền vay</td>
+        <td><input id="txt" type="number"/></td>
+        <td>VND</td>
+    </tr>
+    <tr><td><br></td></tr>
+    <tr>
+        <td>Thời gian vay</td>
+        <td><input id="mth" type="number"/></td>
+        <td>Tháng</td>
+    </tr>
+    <tr><td><br></td></tr>
+    <tr>
+        <td>Lãi xuất</td>
+        <td><input id="lx" type="number"/></td>
+        <td>% năm</td>
+    </tr>
+    <tr>
+        <td align="center" colspan="3"><br>
+            <button type="button" onclick="Count(txt.value, mth.value, lx.value)">Tính</button>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3"><div id="month"></div></td>
+    </tr>
+    <tr><td><br></td></tr>
+    <tr>
+        <td colspan="3"><div id="percent"></div></td>
+    </tr>
+
+</table>
+<script>
+    function Count(number, month, percent) {
+        let s = parseInt(number);
+        let m = parseInt(month);
+        let p = parseInt(percent);
+        let result = 0;
+        let result1 = 0;
+        if (isNaN(s)){
+            document.getElementById('month').innerHTML = 'Dứ liệu truyền vào ko phải là số'
+        } else {
+            result = s / m;
+            document.getElementById('month').innerHTML = 'Số tiền gốc phải đóng hàng tháng là:'+ '<br>' + '<div style="color: crimson">' + result.toLocaleString() + 'Đồng / Tháng' + '</div>';
+        }
+        if (isNaN(s)){
+            document.getElementById('month').innerHTML = 'Dứ liệu truyền vào ko phải là số'
+        } else {
+            result = (s * p) / 100;
+            result1 = result / m;
+            document.getElementById('percent').innerHTML = 'Số tiền lãi hàng tháng là: '+ '<br>' + '<div style="color: crimson">'+ result1.toLocaleString() + 'Đồng / Tháng' +'</div>' ;
+        }
+    }
+</script>
+</body>
+</html>
