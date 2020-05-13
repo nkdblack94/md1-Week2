@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<form  align="center">
+    <img id="images" src="./GamePuzzle/img/bong.jpg"/>
+    <h3>Click button below to move the images to right</h3>
+    <button type="button" onclick="moveRight();">click</button>
+</form>
+
+<script>
+    let imgObj = null;
+    imgObj = document.getElementById('images');
+    function init() {
+        imgObj = document.getElementById('images');
+        imgObj.style.position = 'relative';
+        imgObj.style.left = '0px';
+    }
+    function moveRight() {
+        imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+    }
+
+    window.onload = init();
+</script>
+</body>
+</html>
