@@ -10,28 +10,28 @@
         let number = parseInt(char);
         number = number - 9;
         if (number <= 0) {
-            document.getElementById('xuat').innerHTML = 'Bạn không phải đóng thuế';
+            document.getElementById('text').innerHTML = 'Bạn không phải đóng thuế';
         } else if (number <= 5) {
             let b1 = (number * 5) / 100;
-            document.getElementById('xuat').innerHTML = 'Bạn phải đóng: ' + b1.toLocaleString() + 'tr';
+            document.getElementById('text').innerHTML = 'Bạn phải đóng: ' + b1.toLocaleString() + 'tr';
         } else if (number <= 10) {
             let b2 = (((number - 5) * 10) / 100) + 0.25;
-            document.getElementById('xuat').innerHTML = 'Bạn phải đóng: ' + b2.toLocaleString() + 'tr';
+            document.getElementById('text').innerHTML = 'Bạn phải đóng: ' + b2.toLocaleString() + 'tr';
         } else if (number <= 18) {
             let b3 = (((number - 10) * 15) / 100) + 0.75;
-            document.getElementById('xuat').innerHTML = 'Bạn phải đóng: ' + b3.toLocaleString() + 'tr';
+            document.getElementById('text').innerHTML = 'Bạn phải đóng: ' + b3.toLocaleString() + 'tr';
         } else if (number <= 32) {
             let b4 = (((number - 18) * 20) / 100) + 1.95;
-            document.getElementById('xuat').innerHTML = 'Bạn phải đóng: ' + b4.toLocaleString() + 'tr';
+            document.getElementById('text').innerHTML = 'Bạn phải đóng: ' + b4.toLocaleString() + 'tr';
         } else if (number <= 52) {
             let b5 = (((number - 32) * 25) / 100) + 4.75;
-            document.getElementById('xuat').innerHTML = 'Bạn phải đóng: ' + b5.toLocaleString() + 'tr';
+            document.getElementById('text').innerHTML = 'Bạn phải đóng: ' + b5.toLocaleString() + 'tr';
         } else if (number <= 80) {
             let b6 = (((number - 52) * 30) / 100) + 9.75;
-            document.getElementById('xuat').innerHTML = 'Bạn phải đóng: ' + b6.toLocaleString() + 'tr';
+            document.getElementById('text').innerHTML = 'Bạn phải đóng: ' + b6.toLocaleString() + 'tr';
         } else {
             let b7 = (((number - 80) * 35) / 100) + 18.15;
-            document.getElementById('xuat').innerHTML = 'Bạn phải đóng: ' + b7.toLocaleString() + 'tr';
+            document.getElementById('text').innerHTML = 'Bạn phải đóng: ' + b7.toLocaleString() + 'tr';
         }
     }
 </script>
@@ -41,6 +41,6 @@
 <h3 style="color: crimson">Đơn vị triệu đồng</h3>
 <input type="text" id="number"/>
 <button type="button" onclick="PersonalIncomeTax(number.value)">Count</button>
-<div id="xuat" style="color: blue"><h3>Result:</h3></div>
+<div id="text" style="color: blue"><h3>Result:</h3></div>
 </body>
 </html>
