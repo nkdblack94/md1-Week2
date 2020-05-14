@@ -7,23 +7,24 @@
 <body>
 <script language="JavaScript">
     function TinhGiaDien(number) {
-        let b1 = number * 1678;
-        let b2 = ((number - 50) * 1734) + 83900;
-        let b3 = ((number - 100) * 2014) + 170600;
-        let b4 = ((number - 200) * 2536) + 372000;
-        let b5 = ((number - 300) * 2834) + 625600;
-        let b6 = ((number - 400) * 2927) + 909000;
+
         if (number <= 50){
+            let b1 = number * 1678;
             document.write(number + ' kWh = ' + b1.toLocaleString() + ' VND')
         } else if (number <= 100){
+            let b2 = ((number - 50) * 1734) + 83900;
             document.write(number + ' kWh = ' + b2.toLocaleString() + ' VND')
         } else if (number <=200){
+            let b3 = ((number - 100) * 2014) + 170600;
             document.write(number + ' kWh = ' + b3.toLocaleString() + ' VND')
         } else if (number <= 300){
+            let b4 = ((number - 200) * 2536) + 372000;
             document.write(number + ' kWh = ' + b4.toLocaleString() + ' VND')
         } else if (number <= 400){
+            let b5 = ((number - 300) * 2834) + 625600;
             document.write(number + ' kWh = ' + b5.toLocaleString() + ' VND')
         } else {
+            let b6 = ((number - 400) * 2927) + 909000;
             document.write(number + ' kWh = ' + b6.toLocaleString() + ' VND')
         }
     }
