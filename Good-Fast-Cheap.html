@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game puzzle</title>
+    <style>
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 45px;
+            height: 15px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #cccccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 1px;
+            bottom: -2px;
+            background-color: darkgray;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /*Rounded sliders*/
+        .slider.round {
+            border-radius: 504px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+        .switch2 {
+            position: relative;
+            display: inline-block;
+            width: 45px;
+            height: 15px;
+        }
+        .switch2 input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider2 {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider2:before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 1px;
+            bottom: -2px;
+            background-color: crimson;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked + .slider2 {
+            background-color: crimson;
+        }
+        input:checked + .slider2:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /*Rounded sliders*/
+        .slider2.round {
+            border-radius: 504px;
+        }
+
+        .slider2.round:before {
+            border-radius: 50%;
+        }
+        .switch3 {
+            position: relative;
+            display: inline-block;
+            width: 45px;
+            height: 15px;
+        }
+        .switch3 input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider3 {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider3:before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 1px;
+            bottom: -2px;
+            background-color: fuchsia;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked + .slider3 {
+            background-color: fuchsia;
+        }
+        input:checked + .slider3:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /*Rounded sliders*/
+        .slider3.round {
+            border-radius: 504px;
+        }
+
+        .slider3.round:before {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<table align="center" style="text-align:left">
+    <tr>
+        <td>
+            <label class="switch">
+                <input id="t1" type="checkbox" onclick="input1()">
+                <span class="slider round"></span>
+            </label>
+        </td>
+        <td>GOOLD</td>
+    </tr>
+
+    <tr>
+        <td>
+            <label class="switch2">
+                <input id="t2" type="checkbox" onclick="input2()">
+                <span class="slider2 round"></span>
+            </label>
+        </td>
+        <td>CHEAP</td>
+        <br/><br/>
+    </tr>
+
+    <tr>
+        <td>
+            <label class="switch3">
+                <input id="t3" type="checkbox" onclick="input3()"/>
+                <span class="slider3 round"></span>
+            </label>
+        </td>
+        <td>FAST</td>
+    </tr>
+</table>
+<script>
+    let t1 = document.getElementById('t1');
+    let t2 = document.getElementById('t2');
+    let t3 = document.getElementById('t3');
+    function input1() {
+        if (t1.checked === true && t1.checked === true) {
+            if (t2.checked === true) {
+                t3.checked = false;
+            }
+        }
+    }
+    function input2() {
+        if (t2.checked === true && t1.checked === true) {
+            if (t3.checked === true) {
+                t1.checked = false;
+            }
+        }
+    }
+    function input3() {
+        if (t3.checked === true && t2.checked === true) {
+            if (t1.checked === true) {
+                t2.checked = false;
+            }
+        }
+    }
+</script>
+</body>
+</html>
